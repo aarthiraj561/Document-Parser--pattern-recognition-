@@ -3,12 +3,35 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: text
-  pool: 5
-  username: root
-  password: vijay
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: text
+#   pool: 5
+#   username: root
+#   password: vijay
 
+development:
+  adapter: postgresql
+  database: classifier_development
+  pool: 5
+  timeout: 5000
+  username: aarthi
+  password: aarthi
+
+  test:
+  adapter: postgresql
+  database: classifier_test
+  pool: 5
+  timeout: 5000
+  username: aarthi
+  password: aarthi
+
+production:
+  adapter: postgresql
+  database: classifier_production
+  pool: 5
+  timeout: 5000
+  username: aarthi
+  password: aarthi
