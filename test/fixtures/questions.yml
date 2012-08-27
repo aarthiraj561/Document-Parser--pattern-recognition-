@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  question: MyString
+  topic_id: 1
+  subtopic_id: 1
+  direction: MyString
+  positive_id: 1
+  negative_id: 1
+  difficulty_id: MyString
+  passage_id: 1
+  question_type: MyString
+  ans_status: MyString
+
+two:
+  question: MyString
+  topic_id: 1
+  subtopic_id: 1
+  direction: MyString
+  positive_id: 1
+  negative_id: 1
+  difficulty_id: MyString
+  passage_id: 1
+  question_type: MyString
+  ans_status: MyString

@@ -1,0 +1,17 @@
+<%= form_for @passage, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Passage</legend>
+
+    <div class="control-group">
+      <%= f.label :passage, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :passage, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', passages_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

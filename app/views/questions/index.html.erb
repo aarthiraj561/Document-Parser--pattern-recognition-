@@ -1,0 +1,41 @@
+<h1>Questions</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Question</th>
+      <th>Direction</th>
+      <th>Difficulty</th>
+      <th>Question Type</th>
+      <th>Answer Status</th>
+      <th>Positive Marks</th>
+      <th>Negative Marks</th>
+      <th>Topic_id</th>
+      <th>Subtopic_id</th>
+      <th>Passage_id</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.id %></td>
+        <td><%= link_to question.question, question_path(question) %></td>
+        <td><%= question.direction %></td>
+        <td><%= question.difficulty_id %></td>
+        <td><%= question.question_type %></td>
+        <td><%= question.ans_status %></td>
+        <td><%= question.positive_id %></td>
+        <td><%= question.negative_id %></td>
+        <td><%= question.topic_id %></td>
+        <td><%= question.sub_topic_id %></td>
+        <td><%= question.passage_id %></td>
+        <td>
+          <%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', question_path(question), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New', new_question_path, :class => 'btn btn-primary' %>

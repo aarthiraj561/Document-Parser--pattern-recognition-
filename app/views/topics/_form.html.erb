@@ -1,0 +1,17 @@
+<%= form_for @topic, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Topic</legend>
+
+    <div class="control-group">
+      <%= f.label :topic, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :topic, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', topics_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

@@ -1,0 +1,26 @@
+<h1>Sub Topics</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Subtopic</th>
+      <th>Topic_id</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sub_topics.each do |sub_topic| %>
+      <tr>
+        <td><%= sub_topic.id %></td>
+        <td><%= link_to sub_topic.subtopic, sub_topic_path(sub_topic) %></td>
+        <td><%= sub_topic.topic_id %></td>
+        <td>
+          <%= link_to 'Edit', edit_sub_topic_path(sub_topic), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', sub_topic_path(sub_topic), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_sub_topic_path, :class => 'btn btn-primary' %>

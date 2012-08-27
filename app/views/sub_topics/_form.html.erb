@@ -1,0 +1,24 @@
+<%= form_for @sub_topic, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Sub Topic</legend>
+
+    <div class="control-group">
+      <%= f.label :subtopic, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :subtopic, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :topic_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :topic_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', sub_topics_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Answers</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Answer</th>
+      <th>Status</th>
+      <th>Question_id</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @answers.each do |answer| %>
+      <tr>
+        <td><%= answer.id %></td>
+        <td><%= link_to answer.answer, answer_path(answer) %></td>
+        <td><%= answer.status %></td>
+        <td><%= answer.question_id %></td>
+        <td>
+          <%= link_to 'Edit', edit_answer_path(answer), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', answer_path(answer), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_answer_path, :class => 'btn btn-primary' %>

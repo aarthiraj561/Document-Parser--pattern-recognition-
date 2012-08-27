@@ -1,0 +1,22 @@
+<h1>/Answer</h1>
+
+<p>
+  <b>Answer</b><br>
+  <%= @answer.answer %>
+</p>
+
+<p>
+  <b>Question</b><br>
+  <%= @answer.question_id %>
+</p>
+
+<p>
+  <b>Status</b><br>
+  <%= @answer.status %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', answers_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_answer_path(@answer), :class => 'btn' %>
+  <%= link_to 'Delete', answer_path(@answer), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

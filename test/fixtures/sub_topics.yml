@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subtopic: MyString
+  topic_id: 1
+
+two:
+  subtopic: MyString
+  topic_id: 1

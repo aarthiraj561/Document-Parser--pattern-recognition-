@@ -1,0 +1,31 @@
+<%= form_for @image, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Image</legend>
+
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :path, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :path, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :question_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :question_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', images_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
